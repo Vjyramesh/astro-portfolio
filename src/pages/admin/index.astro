@@ -1,0 +1,22 @@
+---
+import Login from '../../components/login/login.astro';
+import AdminLayout from './../../_layouts/AdminLayout.astro';
+import './admin.css';
+import { actions, isInputError } from "astro:actions";
+
+const result = Astro.getActionResult(actions.login);
+const inputErrors = isInputError(result?.error) ? result.error.fields : {};
+if (result?.data?.ok) {
+  return Astro.redirect("/");
+}
+---
+
+<AdminLayout>
+    <div class="page-login">
+        <section class="cmp-container grid grid-cols-12 h-dvh gap-4 items-center">
+            <div class="col-span-12 md:col-start-4 md:col-span-6 lg:col-start-5 lg:col-span-4">
+                <Login errors={inputErrors} />
+            </div>
+        </section>
+    </div>
+</AdminLayout>

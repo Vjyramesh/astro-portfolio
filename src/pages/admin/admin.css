@@ -1,0 +1,17 @@
+@reference 'tailwindcss';
+
+@layer components {
+    main {
+        @apply mt-0;
+    }
+    .page-login {
+        @apply bg-blue-300;
+        :is(h1, h2, h3, h4, h5, h6) {
+            @apply mb-0 h-auto leading-10 text-center;
+        }
+
+        p {
+            @apply mb-3 text-center text-sm;
+        }
+    }
+}

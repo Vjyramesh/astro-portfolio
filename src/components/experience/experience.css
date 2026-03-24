@@ -7,7 +7,7 @@
         }
 
         .cmp-experience__list {
-            @apply mt-5;
+            @apply mt-10;
         }
         .cmp-experience__list-item {
             @apply [&:not(:last-of-type)]:mb-6;

@@ -1,0 +1,30 @@
+---
+import Button from './../../blocks/button/index.astro';
+import Input from './../../blocks/input/index.astro';
+import Card from './../../blocks/card/card.astro';
+import { actions } from 'astro:actions';
+import './login.css';
+
+
+
+const {
+    errors
+} = Astro.props;
+---
+
+<Card class="cmp-login">
+  <h1>Login</h1>
+  <p>Secure user authentication for accessing protected system resources</p>
+
+  <form method="POST" action={actions.login}>
+    <Input label="User Name" id="email" placeholder="Enter Your Username" autocomplete="username" type="email">
+        {errors.email && <p class="error">{errors.email.join(', ')}</p>}
+    </Input>
+
+    <Input label="Password" id="password" placeholder="Enter Your Password" autocomplete="current-password" type="password">
+        {errors.password && <p class="error">{errors.password.join(', ')}</p>}
+    </Input>
+
+    <Button class="cmp-login__submit">Login</Button>
+  </form>
+</Card>

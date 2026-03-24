@@ -1,0 +1,15 @@
+---
+import './input.css';
+const {
+    id,
+    label,
+    type='text',
+    ...props
+} = Astro.props;
+---
+
+<div class="input">
+    <label for={id}>{label}</label>
+    <input type={type} name={id} id={id} {...props}/>
+    <slot/>
+</div>

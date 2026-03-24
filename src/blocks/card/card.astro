@@ -2,11 +2,11 @@
 import { Image } from "astro:assets";
 import "./card.css";
 const {
-    imageUrl, alt
+    imageUrl, alt, class: className= ''
 } = Astro.props
 ---
 
-<div class="card">
+<div class={`card ${className}`}>
     {
         imageUrl ? <Image
         src={imageUrl}

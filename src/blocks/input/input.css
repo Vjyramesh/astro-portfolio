@@ -1,0 +1,16 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .input {
+        @apply mb-3;
+        label {
+            @apply text-black mb-1 block;
+        }
+        .error {
+            @apply text-red-500 text-left mt-1 m-0;
+        }
+        input {
+            @apply w-full h-10 border border-gray-300 px-3 focus-visible:outline focus-visible:outline-offset-2;
+        }
+    }
+}

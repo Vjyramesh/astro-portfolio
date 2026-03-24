@@ -1,0 +1,10 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .cmp-login {
+        @apply shadow-lg p-3;
+        .cmp-login__submit {
+            @apply w-[200px] flex justify-self-center
+        }
+    }
+}
