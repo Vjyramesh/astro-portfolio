@@ -1,0 +1,107 @@
+---
+import Card from "../../blocks/card/card.astro";
+import Button from "../../blocks/button/index.astro";
+import { Icon } from "astro-icon/components";
+import "./recent-blogs.css";
+import Badge from "../../blocks/badge/badge.astro";
+import SectionHeading from "../../blocks/section-heading/section-heading.astro";
+
+const { class: className = "" } = Astro.props;
+---
+
+<section class={`section cmp-recent-blogs ${className}`} id="blogs">
+    <div class="cmp-container">
+        <SectionHeading
+            title="Recent Blogs"
+            desc="A quick look at my latest writing, experiments, and discoveries."
+        />
+        <div
+            class="cmp-recent-blogs__container grid grid-cols-1 lg:grid-cols-3 gap-4"
+        >
+            <div class="col-span-1">
+                <Card imageUrl="/public/images/photo.png" alt="Astro Article">
+                    <h4 class="card__content-title">{"Astro Article"}</h4>
+                    <div class="flex justify-between">
+                        <div class="card__content-tag-container">
+                            <Badge class="tag">HTML</Badge>
+                            <Badge class="tag">Typescript</Badge>
+                        </div>
+                        <div class="cmp-recent-blogs__publish-date">
+                            <p>28 March 2025</p>
+                        </div>
+                    </div>
+                    <p class="card__content-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Iste expedita dolor cupiditate, repudiandae totam
+                        reiciendis? Expedita quae mollitia officia
+                        necessitatibus commodi natus quo nemo, quidem,
+                        laudantium iste cumque, odit veritatis!
+                    </p>
+
+                    <Button href="/blogs/this-is-your-id" variant="transparent">
+                        Know More <Icon name={"arrow-up-right"} size={16} />
+                    </Button>
+                </Card>
+            </div>
+            <div class="col-span-1">
+                <Card imageUrl="/public/images/photo.png" alt="Astro Article">
+                    <h4 class="card__content-title">{"Astro Article"}</h4>
+                    <div class="flex justify-between">
+                        <div class="card__content-tag-container">
+                            <Badge class="tag">HTML</Badge>
+                            <Badge class="tag">Typescript</Badge>
+                        </div>
+                        <div class="cmp-recent-blogs__publish-date">
+                            <p>28 March 2025</p>
+                        </div>
+                    </div>
+                    <p class="card__content-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Iste expedita dolor cupiditate, repudiandae totam
+                        reiciendis? Expedita quae mollitia officia
+                        necessitatibus commodi natus quo nemo, quidem,
+                        laudantium iste cumque, odit veritatis!
+                    </p>
+
+                    <Button href="/blogs/this-is-your-id" variant="transparent">
+                        Know More <Icon name={"arrow-up-right"} size={16} />
+                    </Button>
+                </Card>
+            </div>
+            <div class="col-span-1">
+                <Card imageUrl="/public/images/photo.png" alt="Astro Article">
+                    <h4 class="card__content-title">{"Astro Article"}</h4>
+                    <div class="flex justify-between">
+                        <div class="card__content-tag-container">
+                            <Badge class="tag">HTML</Badge>
+                            <Badge class="tag">Typescript</Badge>
+                        </div>
+                        <div class="cmp-recent-blogs__publish-date">
+                            <p>28 March 2025</p>
+                        </div>
+                    </div>
+                    <p class="card__content-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Iste expedita dolor cupiditate, repudiandae totam
+                        reiciendis? Expedita quae mollitia officia
+                        necessitatibus commodi natus quo nemo, quidem,
+                        laudantium iste cumque, odit veritatis!
+                    </p>
+
+                    <Button href="/blogs/this-is-your-id" variant="transparent">
+                        Know More <Icon name={"arrow-up-right"} size={16} />
+                    </Button>
+                </Card>
+            </div>
+        </div>
+        <Button
+            class="cmp-recent-blogs__view-all"
+            variant="primary"
+            href="/blogs"
+            outline>View All</Button
+        >
+    </div>
+</section>
+<script type="module">
+    import "./recent-blogs.ts";
+</script>

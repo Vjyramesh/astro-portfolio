@@ -1,0 +1,26 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .card {
+        @apply bg-white text-left border border-gray-100;
+        img {
+            @apply w-full h-[250px] object-cover object-top;
+        }
+
+        .card__content {
+            @apply p-4;
+        }
+
+        :is(h1, h2, h3, h4, h5, h6) {
+            @apply text-black font-bold line-clamp-2 h-13;
+        }
+
+        p {
+            @apply font-light leading-5 line-clamp-3 text-gray-500 mt-4;
+        }
+
+        .btn {
+            @apply mt-4;
+        }
+    }
+}

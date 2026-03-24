@@ -1,0 +1,27 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .page-blog-detail {
+        @apply pb-10 bg-white;
+
+        b, strong {
+            @apply font-bold;
+        }
+        .cmp-container {
+            @apply lg:w-[50%];
+        }
+        .cmp-image-banner {
+            @apply mb-4;
+        }
+        .page-blog-detail__image {
+            @apply w-auto mb-4;
+        }
+
+        .page-blog-detail__language {
+            @apply mb-4 flex gap-4 flex-wrap;
+        }
+        p {
+            @apply leading-6 mb-4 font-light
+        }
+    }
+}

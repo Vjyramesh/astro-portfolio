@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "./../../../_layouts/BaseLayout.astro";
+import Card from "../../../blocks/card/card.astro";
+import Button from "../../../blocks/button/index.astro";
+import { Icon } from "astro-icon/components";
+import Badge from "../../../blocks/badge/badge.astro";
+import './blog-detail.css';
+import ImageBanner from "../../../components/image-banner/image-banner.astro";
+const { slug } = Astro.params;
+---
+
+<BaseLayout>
+	<div class="page-blog-detail">
+		<ImageBanner title="Integrating React i18n (Internationalization)with Storybook using React + Typescript" />
+		<div class="cmp-container">
+			<div class="grid grid-cols-12 gap-x-4">
+				<div class="col-span-12">
+					<div class="page-blog-detail__language">
+						<Badge >HTML5</Badge>
+						<Badge>CSS3</Badge>
+						<Badge>JavaScript</Badge>
+						<Badge>TypeScript</Badge>
+						<Badge>Astro</Badge>
+						<Badge>ReactJS</Badge>
+					</div>
+					<p>In a modern development context, i18n (internationalization) is used to make applications adaptable to different languages and regions without engineering changes. This is especially critical for apps targeting global users.</p>
+					<h3>React i18n</h3>	
+					<p>Using React <b>i18n</b>, typically with the react-i18next library, allows developers to build multilingual React applications efficiently</p>
+					<Image
+						src={"/public/images/banner/banner.jpg"}
+						alt={"Blog Detail"}
+						class="page-blog-detail__image"
+						loading={"eager"}
+						width={100}
+						height={100}
+					/>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia itaque, et magni quas assumenda praesentium quae nobis exercitationem nostrum repellendus vel dolorem mollitia totam quos nisi rerum magnam cumque rem? Repellendus ratione consectetur officia doloribus nemo, possimus qui! Illo ratione ullam in sint quae illum repellendus, expedita vero saepe consequuntur cupiditate, fugit ipsum. Soluta obcaecati aliquam culpa numquam unde, incidunt porro, deleniti voluptate necessitatibus optio in, beatae libero cupiditate? Aut voluptas ullam, vitae vel quis illo fugit corporis odit est obcaecati architecto ut modi dolores quia fuga rerum dolore aliquid omnis minima accusantium! Itaque quasi, eius quo obcaecati voluptate voluptatum!</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, illum corrupti soluta debitis illo minus deleniti! Architecto voluptates perspiciatis neque? Reprehenderit vero incidunt quisquam. Dolores, amet. Alias expedita commodi nulla modi suscipit, sapiente corporis aliquam quas ut, laudantium, aliquid veniam maxime ipsa autem possimus deserunt velit eaque veritatis architecto cum id. Consequatur nobis laborum vero dolorem a saepe molestiae? Dignissimos, dolorem nostrum. Repudiandae consectetur eum provident mollitia, aliquam minus molestias? Ab, perspiciatis quam. Quis nisi veniam totam odio iusto dolorum laboriosam eligendi? Quia quod magni eos. Ullam reiciendis quos inventore nesciunt, optio aliquid in doloribus quo deleniti at recusandae. Explicabo tempora dignissimos distinctio culpa vel est ab error accusamus maiores iure facilis ipsa blanditiis ullam, libero a similique corporis eius qui laudantium enim ea. Maiores recusandae autem animi voluptate at beatae iste nihil esse, minima velit non sunt deleniti distinctio eaque quae molestiae aspernatur, culpa qui fuga, magnam eveniet hic incidunt? Ipsam repellat deleniti fuga eius quidem facere totam similique nemo perferendis tenetur rem vel quae porro impedit, necessitatibus doloribus incidunt, eveniet neque dolor, inventore eum temporibus labore ea placeat? Modi iure quod dicta veniam optio odio eligendi iusto, nobis exercitationem veritatis, eum corporis quis voluptate tempora beatae totam quos dolores et fugiat accusamus expedita ullam? Pariatur molestiae repellat reiciendis accusamus quidem, quae iure recusandae explicabo ullam perferendis, odit voluptate dolore qui nesciunt eos quisquam non modi voluptates eum omnis a expedita inventore culpa. Similique alias illo iure quam odio.
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</BaseLayout>

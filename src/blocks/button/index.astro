@@ -1,0 +1,27 @@
+---
+import type { ButtonProps } from './../../@types/button.props';
+import './button.css';
+
+const {
+    class: className = '',
+    variant = 'primary',
+    fullWidth = false,
+    outline = false,
+    href,
+    ...props
+} = Astro.props as ButtonProps;
+
+const buttonClass = `btn ${outline ? `btn-${variant}-outline` : `btn-${variant}`} ${className} ${fullWidth ? 'btn-full' : ''}`;
+---
+
+{
+    href ? (
+        <a class={buttonClass} href={href} {...props}>
+            <slot />
+        </a>
+    ) : (
+        <button class={buttonClass} {...props}>
+            <slot />
+        </button>
+    )
+}

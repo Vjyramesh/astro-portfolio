@@ -1,0 +1,16 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .cmp-dropdown {
+        @apply relative w-auto;
+
+        .cmp-dropdown__list {
+            @apply flex absolute bg-white shadow-lg flex-col right-0 max-w-[250px] z-10;
+        }
+
+        .cmp-dropdown__list-item {
+            @apply whitespace-nowrap text-sm text-gray-700 cursor-pointer p-4;
+            @apply hover:bg-gray-50
+        }
+    }
+}

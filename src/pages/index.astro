@@ -1,17 +1,17 @@
 ---
-
+import Banner from '../components/banner/banner.astro';
+import Experience from '../components/experience/experience.astro';
+import MySkills from '../components/my-skills/my-skills.astro';
+import MyWorks from '../components/my-works/my-works.astro';
+import RecentBlogs from '../components/recent-blogs/recent-blogs.astro';
+import BaseLayout from './../_layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+	<Banner />
+	<MySkills />
+	<Experience class="bg-white"/>
+	<MyWorks />
+	<RecentBlogs class="bg-white" />
+</BaseLayout>
+	

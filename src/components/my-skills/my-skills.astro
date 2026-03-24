@@ -1,0 +1,125 @@
+---
+import { Image } from "astro:assets";
+import SectionHeading from "../../blocks/section-heading/section-heading.astro";
+import "./my-skills.css";
+const { class: className = "" } = Astro.props;
+---
+
+<section id="my-skills" class={`section cmp-my-skills ${className}`}>
+    <div class="cmp-container">
+        <SectionHeading
+            title="My Skills"
+            desc="Skilled full-stack engineer developing efficient frontend, backend, and database solutions."
+        />
+        <div class="cmp-my-skills__grid">
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/html.png"}
+                    alt={"HTML5"}
+                    width={75}
+                    height={75}
+                />
+                <h4>HTML5</h4>
+            </div>
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/css-3.png"}
+                    alt={"CSS 3"}
+                    width={75}
+                    height={75}
+                />
+                <h4>CSS 3</h4>
+            </div>
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/javascript.png"}
+                    alt={"JavasSript"}
+                    width={75}
+                    height={75}
+                />
+                <h4>JavaScript</h4>
+            </div>
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/typescript.png"}
+                    alt={"Typescript"}
+                    width={75}
+                    height={75}
+                />
+                <h4>TypeScript</h4>
+            </div>
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/react.svg"}
+                    alt={"React"}
+                    width={75}
+                    height={75}
+                />
+                <h4>React JS</h4>
+            </div>
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/nodejs.png"}
+                    alt={"NodeJS"}
+                    width={75}
+                    height={75}
+                />
+                <h4>Node JS</h4>
+            </div>
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/nextjs.svg"}
+                    alt={"NextJS"}
+                    width={75}
+                    height={75}
+                />
+                <h4>Next JS</h4>
+            </div>
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/astro.svg"}
+                    alt={"Astro"}
+                    width={75}
+                    height={75}
+                />
+                <h4>Astro JS</h4>
+            </div>
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/tailwind.svg"}
+                    alt={"Tailwind"}
+                    width={75}
+                    height={75}
+                />
+                <h4>TailWind CSS</h4>
+            </div>
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/sqlite.png"}
+                    alt={"SQLite"}
+                    width={75}
+                    height={75}
+                />
+                <h4>SQLite</h4>
+            </div>
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/prisma.svg"}
+                    alt={"Prisma"}
+                    width={75}
+                    height={75}
+                />
+                <h4>Prisma</h4>
+            </div>
+            <div class="col-span-1 cmp-my-skills__item">
+                <Image
+                    src={"/public/images/skills/sass.png"}
+                    alt={"SCSS/SASS"}
+                    width={75}
+                    height={75}
+                />
+                <h4>SCSS / SASS</h4>
+            </div>
+        </div>
+    </div>
+</section>

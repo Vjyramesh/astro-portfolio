@@ -1,0 +1,46 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .cmp-experience {
+        .cmp-container {
+            @apply lg:w-[65%]
+        }
+
+        .cmp-experience__list {
+            @apply mt-5;
+        }
+        .cmp-experience__list-item {
+            @apply [&:not(:last-of-type)]:mb-6;
+        }
+        .cmp-experience__content {
+            @apply before:w-3 before:h-3 before:absolute before:left-2.5 before:top-[7px] before:bg-blue-500 before:rounded-2xl;
+            @apply after:w-5 after:h-5 after:absolute after:left-1.5 after:top-[3px] after:bg-transparent after:border after:border-blue-500 after:rounded-2xl;
+            @apply pl-10 relative;
+        }
+
+        .cmp-experience__content-name {
+            @apply mb-2;
+        }
+
+        .cmp-experience__content-years {
+            @apply mb-1 text-gray-500 font-semibold text-sm
+        }
+        .cmp-experience__content-location {
+            @apply text-gray-700 text-sm mb-1
+        }
+
+        .cmp-experience__content-designation {
+            @apply mt-5;
+            .cmp-experience__content-years {
+                @apply text-gray-500 font-semibold text-sm mb-1;
+            }
+            h5 {
+                @apply text-lg mt-4 mb-2;
+            }
+
+            p {
+                @apply text-sm text-gray-500 leading-5;
+            }
+        }
+    }
+}

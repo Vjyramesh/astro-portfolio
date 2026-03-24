@@ -1,0 +1,24 @@
+---
+import Button from "./../../blocks/button/index.astro";
+import { Icon } from "astro-icon/components";
+import "./dropdown.css";
+
+const {
+    id = 'dropdown'
+} = Astro.props
+---
+
+<div class="cmp-dropdown">
+    <Button variant="transparent" class="mb-2" id={id} aria-controls={id} aria-expanded="false" aria-haspopup="menu">
+        <Icon name={"filter"} size={20} />
+    </Button>
+    <ul class="cmp-dropdown__list" role="menu" aria-labelledby={id} hidden>
+        <li class="cmp-dropdown__list-item" role="menuitem" tabindex="0">Sort By Name (ASC)</li>
+        <li class="cmp-dropdown__list-item" role="menuitem" tabindex="0">Sort By Name (DESC)</li>
+        <li class="cmp-dropdown__list-item" role="menuitem" tabindex="0">Sort By Date (ASC)</li>
+        <li class="cmp-dropdown__list-item" role="menuitem" tabindex="0">Sort By Date (DESC)</li>
+    </ul>
+</div>
+<script>
+    import "./dropdown.ts";
+</script>

@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import "./image-banner.css";
+
+const {
+    title,
+    desc
+} = Astro.props;
+---
+
+<div class="cmp-image-banner">
+    <Image
+        src={"/public/images/banner/banner.jpg"}
+        alt={title}
+        width={100}
+        height={100}
+        loading={"eager"}
+    />
+    <div class="cmp-container cmp-image-banner__content">
+        <h1>{title}</h1>
+        <p>{desc}</p>
+    </div>
+</div>

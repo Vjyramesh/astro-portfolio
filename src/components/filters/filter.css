@@ -1,0 +1,8 @@
+@reference 'tailwindcss';
+@layer components {
+    .cmp-filter {
+        .cmp-filter__heading {
+            @apply flex justify-between items-center;
+        }
+    }
+}

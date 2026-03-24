@@ -1,0 +1,26 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss";
+@import './_typography.css';
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        @apply bg-gray-100
+    }
+    
+    .cmp-container {
+        @apply px-5 lg:px-0 container mx-auto;
+    }
+
+    a {
+        @apply text-blue-500 focus-visible:outline focus-visible:outline-blue-500 focus-visible:outline-offset-2;
+    }
+    main {
+        @apply mt-15;
+    }
+    .section {
+        @apply py-20;
+    }
+}

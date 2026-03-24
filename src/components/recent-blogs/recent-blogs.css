@@ -1,0 +1,21 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .cmp-recent-blogs {
+        .cmp-recent-blogs__container {
+            @apply mt-8;
+        }
+
+        .cmp-recent-blogs__view-all {
+            @apply w-[200px] mt-5 h-12 flex justify-self-center;
+        }
+
+        .cmp-recent-blogs__publish-date {
+            @apply flex items-center mt-2;
+            p {
+                @apply text-sm text-gray-500 mt-0;
+            }
+        }
+
+    }
+}

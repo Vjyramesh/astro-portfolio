@@ -1,0 +1,129 @@
+---
+import BaseLayout from "./../../_layouts/BaseLayout.astro";
+import "./my-works.css";
+import ImageBanner from "../../components/image-banner/image-banner.astro";
+import Card from "../../blocks/card/card.astro";
+import Badge from "../../blocks/badge/badge.astro";
+import Button from "../../blocks/button/index.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<BaseLayout>
+	<div class="page-my-works">
+		<ImageBanner title="My Works Banner" desc="Creates user-friendly web experiences using HTML, CSS, JavaScript and frameworks." />
+		<div class="cmp-container grid grid-cols-12 gap-4 mt-10">
+			<div class="col-span-12 lg:col-span-4">
+				<Card
+					imageUrl="/public/images/photo.png"
+					alt="Astro Article"
+				>
+					<h4 class="card__content-title">{"Astro Article"}</h4>
+					<div class="flex justify-between">
+						<div class="card__content-tag-container">
+							<Badge class="tag">HTML</Badge>
+							<Badge class="tag">Typescript</Badge>
+						</div>
+					</div>
+					<p class="card__content-desc">
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Iste expedita dolor cupiditate, repudiandae
+						totam reiciendis? Expedita quae mollitia officia
+						necessitatibus commodi natus quo nemo, quidem,
+						laudantium iste cumque, odit veritatis!
+					</p>
+
+					<Button
+						href="/my-works/this-is-your-id"
+						variant="transparent"
+					>
+						Know More <Icon name={"arrow-up-right"} size={16} />
+					</Button>
+				</Card>
+			</div>
+			<div class="col-span-12 lg:col-span-4">
+				<Card
+					imageUrl="/public/images/photo.png"
+					alt="Astro Article"
+				>
+					<h4 class="card__content-title">{"Astro Article"}</h4>
+					<div class="flex justify-between">
+						<div class="card__content-tag-container">
+							<Badge class="tag">HTML</Badge>
+							<Badge class="tag">Typescript</Badge>
+						</div>
+					</div>
+					<p class="card__content-desc">
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Iste expedita dolor cupiditate, repudiandae
+						totam reiciendis? Expedita quae mollitia officia
+						necessitatibus commodi natus quo nemo, quidem,
+						laudantium iste cumque, odit veritatis!
+					</p>
+
+					<Button
+						href="/my-works/this-is-your-id"
+						variant="transparent"
+					>
+						Know More <Icon name={"arrow-up-right"} size={16} />
+					</Button>
+				</Card>
+			</div>
+			<div class="col-span-12 lg:col-span-4">
+				<Card
+					imageUrl="/public/images/photo.png"
+					alt="Astro Article"
+				>
+					<h4 class="card__content-title">{"Astro Article"}</h4>
+					<div class="flex justify-between">
+						<div class="card__content-tag-container">
+							<Badge class="tag">HTML</Badge>
+							<Badge class="tag">Typescript</Badge>
+						</div>
+					</div>
+					<p class="card__content-desc">
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Iste expedita dolor cupiditate, repudiandae
+						totam reiciendis? Expedita quae mollitia officia
+						necessitatibus commodi natus quo nemo, quidem,
+						laudantium iste cumque, odit veritatis!
+					</p>
+
+					<Button
+						href="/my-works/this-is-your-id"
+						variant="transparent"
+					>
+						Know More <Icon name={"arrow-up-right"} size={16} />
+					</Button>
+				</Card>
+			</div>
+			<div class="col-span-12 lg:col-span-4">
+				<Card
+					imageUrl="/public/images/photo.png"
+					alt="Astro Article"
+				>
+					<h4 class="card__content-title">{"Astro Article"}</h4>
+					<div class="flex justify-between">
+						<div class="card__content-tag-container">
+							<Badge class="tag">HTML</Badge>
+							<Badge class="tag">Typescript</Badge>
+						</div>
+					</div>
+					<p class="card__content-desc">
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Iste expedita dolor cupiditate, repudiandae
+						totam reiciendis? Expedita quae mollitia officia
+						necessitatibus commodi natus quo nemo, quidem,
+						laudantium iste cumque, odit veritatis!
+					</p>
+
+					<Button
+						href="/my-works/this-is-your-id"
+						variant="transparent"
+					>
+						Know More <Icon name={"arrow-up-right"} size={16} />
+					</Button>
+				</Card>
+			</div>
+		</div>
+	</div>
+</BaseLayout>

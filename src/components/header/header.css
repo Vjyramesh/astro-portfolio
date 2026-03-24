@@ -1,0 +1,48 @@
+@reference 'tailwindcss';
+
+@layer components {
+
+    .cmp-header {
+        @apply bg-white w-full shadow-sm fixed top-0 left-0 z-20;
+        .cmp-container {
+            @apply flex justify-between
+        }
+        .cmp-header__name {
+            a {
+                @apply text-lg font-bold h-full leading-15 text-black uppercase;
+            }
+        }
+    
+        .cmp-header__nav {
+            @apply max-lg:hidden max-lg:absolute max-lg:left-0 max-lg:top-15 max-lg:w-full max-lg:bg-white lg:block;
+            &.block {
+                @apply block;
+            }
+            ul {
+                @apply flex w-fit mx-auto;
+                @apply max-lg:absolute max-lg:left-0 max-lg:w-full max-lg:bg-white max-lg:flex-col max-lg:h-dvh max-lg:border-t max-lg:border-t-gray-300;
+            }
+    
+            .cmp-header__nav-link {
+                @apply text-black decoration-0 h-15 leading-15 px-5 block;
+                @apply hover:bg-gray-200 hover:text-black;
+    
+                &.active {
+                    @apply bg-blue-500 text-white;
+                }
+            }
+        }
+    
+        .cmp-header__hamburger {
+            @apply px-2 lg:hidden h-10 self-center flex items-center;
+    
+            .cmp-header__icon {
+                @apply block;
+            }
+        }
+    
+        .cmp-header__icon {
+            @apply block;
+        }
+    }
+}

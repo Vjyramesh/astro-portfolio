@@ -1,0 +1,7 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .page-my-works {
+        @apply pb-10 bg-white;
+    }
+}

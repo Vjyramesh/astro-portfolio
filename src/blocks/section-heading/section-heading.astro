@@ -1,0 +1,13 @@
+---
+import './section-heading.css';
+const {
+    title,
+    desc
+} = Astro.props
+---
+<div class="section-heading">
+    <h2 class="section-heading__title">{title}</h2>
+    <p class="section-heading__desc">
+        {desc}
+    </p>
+</div>

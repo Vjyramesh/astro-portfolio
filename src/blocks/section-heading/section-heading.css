@@ -1,0 +1,18 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .section-heading {
+        @apply text-center;
+        .section-heading__title, .section-heading__desc {
+            @apply lg:w-[50%] mx-auto;
+        }
+        .section-heading__title {
+            @apply after:relative after:block after:mx-auto after:bg-blue-500 after:w-[50px] after:h-[4px] after:mt-3 after:rounded-2xl
+        }
+
+        .section-heading__desc {
+            @apply text-gray-400;
+
+        }
+    }
+}

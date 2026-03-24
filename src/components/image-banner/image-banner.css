@@ -1,0 +1,25 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .cmp-image-banner {
+        @apply before:absolute before:left-0 before:top-0 before:w-full before:bg-black/40 z-10 before:h-full;
+        @apply relative py-[150px] overflow-hidden;
+
+        img {
+            @apply w-full min-h-full object-bottom absolute top-0 -z-10;
+            @apply lg:object-contain
+        }
+
+        .cmp-image-banner__content {
+            @apply text-center relative;
+
+            :is(h1, h2, h3, h4, h5, h6, p) {
+                @apply text-white;
+            }
+
+            :is(h1, h2, h3, h4, h5, h6) {
+                @apply leading-10
+            }
+        }
+    }
+}

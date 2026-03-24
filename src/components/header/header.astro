@@ -1,0 +1,51 @@
+---
+import "./header.css";
+import Button from "./../../blocks/button/index.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<header class="cmp-header">
+    <div class="cmp-container">
+        <div class="cmp-header__name">
+            <a href="/#">Vijay Rameshkumar</a>
+        </div>
+        <Button class="btn cmp-header__hamburger" variant="transparent">
+            <span class="cmp-header__icon cmp-header__icon-menu">
+                <Icon name={"hamburger"} size={20} />
+            </span>
+            <span class="cmp-header__icon cmp-header__icon-close" hidden>
+                <Icon name={"close"} size={20} />
+            </span>
+            <span class="sr-only">Hamburger Button</span>
+        </Button>
+        <nav class="cmp-header__nav">
+            <ul>
+                <li class="cmp-header__nav-item">
+                    <a class="cmp-header__nav-link" href="/#">Home</a>
+                </li>
+                <li class="cmp-header__nav-item">
+                    <a class="cmp-header__nav-link" href="/#my-skills"
+                        >My Skills</a
+                    >
+                </li>
+                <li class="cmp-header__nav-item">
+                    <a class="cmp-header__nav-link" href="/#experience"
+                        >Experience</a
+                    >
+                </li>
+                <li class="cmp-header__nav-item">
+                    <a class="cmp-header__nav-link" href="#my-works"
+                        >My Works</a
+                    >
+                </li>
+                <li class="cmp-header__nav-item">
+                    <a class="cmp-header__nav-link" href="/#blogs">Blogs</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+    import "./header.ts";
+</script>

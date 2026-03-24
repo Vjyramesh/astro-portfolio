@@ -1,0 +1,124 @@
+---
+import Badge from "../../blocks/badge/badge.astro";
+import SectionHeading from "../../blocks/section-heading/section-heading.astro";
+import "./experience.css";
+
+const { class: className = "" } = Astro.props;
+---
+
+<section class={`cmp-experience section ${className}`} id="experience">
+    <div class="cmp-container">
+        <SectionHeading
+            title="My Experience"
+            desc="Full stack developer building scalable applications with modern technologies efficiently."
+        />
+
+        <ul class="cmp-experience__list">
+            <li class="cmp-experience__list-item">
+                <div class="cmp-experience__content">
+                    <h4 class="cmp-experience__content-name">
+                        Adobe Systems Private Limited
+                    </h4>
+                    <p class="cmp-experience__content-years">
+                        March 2020 - Present
+                    </p>
+                    <p class="cmp-experience__content-location">
+                        Bengaluru, Karnataka, India
+                    </p>
+                    <ul class="cmp-experience__content-list">
+                        <Badge>HTML5</Badge>
+                        <Badge>CSS3</Badge>
+                        <Badge>EDS</Badge>
+                        <Badge>PReact</Badge>
+                        <Badge>SolidJS</Badge>
+                        <Badge>JavaScript</Badge>
+                        <Badge>TypeScript</Badge>
+                    </ul>
+                    <ul class="cmp-experience__content-designation">
+                        <li>
+                            <h5>Senior Technical Consultant</h5>
+                            <p class="cmp-experience__content-years">
+                                March 2020 - Present
+                            </p>
+                            <p>
+                                Owned end-to-end UI integration, designing and
+                                implementing user flows using HTML5, CSS3,
+                                JavaScript, jQuery, AJAX, and Handlebars. Worked
+                                extensively with Adobe Experience Manager (AEM)
+                                to build reusable templates and components for
+                                CMS-driven solutions. Led frontend development
+                                with a focus on performance, scalability, and
+                                bug resolution. Also leveraged Adobe Edge
+                                Delivery Services (EDS) and React Native for
+                                optimized web and cross-platform mobile
+                                experiences.
+                            </p>
+                        </li>
+                        <li>
+                            <h5>Technical Consultant</h5>
+                            <p class="cmp-experience__content-years">
+                                March 2020 - Present
+                            </p>
+                            <p>
+                                Owned end-to-end UI integration, designing and
+                                implementing user flows using HTML5, CSS3,
+                                JavaScript, jQuery, AJAX, and Handlebars. Worked
+                                extensively with Adobe Experience Manager (AEM)
+                                to build reusable templates and components for
+                                CMS-driven solutions. Led frontend development
+                                with a focus on performance, scalability, and
+                                bug resolution. Also leveraged Adobe Edge
+                                Delivery Services (EDS) and React Native for
+                                optimized web and cross-platform mobile
+                                experiences.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="cmp-experience__list-item">
+                <div class="cmp-experience__content">
+                    <h4 class="cmp-experience__content-name">
+                        Pro Unlimited Private Limited
+                    </h4>
+                    <p class="cmp-experience__content-years">
+                        March 2020 - Present
+                    </p>
+                    <p class="cmp-experience__content-location">
+                        Bengaluru, Karnataka, India
+                    </p>
+                    <ul class="cmp-experience__content-list">
+                        <Badge>HTML5</Badge>
+                        <Badge>CSS3</Badge>
+                        <Badge>EDS</Badge>
+                        <Badge>PReact</Badge>
+                        <Badge>SolidJS</Badge>
+                        <Badge>JavaScript</Badge>
+                        <Badge>TypeScript</Badge>
+                    </ul>
+                    <ul class="cmp-experience__content-designation">
+                        <li>
+                            <h5>UI Developer</h5>
+                            <p class="cmp-experience__content-years">
+                                March 2020 - Present
+                            </p>
+                            <p>
+                                Owned end-to-end UI integration, designing and
+                                implementing user flows using HTML5, CSS3,
+                                JavaScript, jQuery, AJAX, and Handlebars. Worked
+                                extensively with Adobe Experience Manager (AEM)
+                                to build reusable templates and components for
+                                CMS-driven solutions. Led frontend development
+                                with a focus on performance, scalability, and
+                                bug resolution. Also leveraged Adobe Edge
+                                Delivery Services (EDS) and React Native for
+                                optimized web and cross-platform mobile
+                                experiences.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>

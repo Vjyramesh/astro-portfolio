@@ -1,0 +1,15 @@
+---
+import Dropdown from '../dropdown/dropdown.astro';
+import './filter.css';
+
+const {
+    title,
+} = Astro.props;
+---
+
+<aside class="cmp-filter">
+    <div class="cmp-filter__heading">
+        <h3>{title}</h3>
+        <Dropdown id="filter-sort" />
+    </div>
+</aside>

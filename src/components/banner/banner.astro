@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import Button from "./../../blocks/button/index.astro";
+import "./banner.css";
+---
+
+<section class="cmp-banner">
+    <div class="cmp-container">
+        <div class="cmp-banner__image">
+            <Image src={'/public/images/photo.png'} alt={'Vijay Rameshkumar'} width={100} height={100} loading={'eager'} />
+        </div>
+        <h1 class="cmp-banner__name">Vijay Rameshkumar</h1>
+        <h6 class="cmp-banner__designation">Senior Technical Consultant</h6>
+        <p class="cmp-banner__description">
+            Experienced front-end designer and developer focused on delivering high-performance, scalable, and data-driven web applications. Strong foundation in data structures, algorithms, and design patterns, with practical experience applying modern web technologies to build efficient and maintainable systems.
+        </p>
+        <div class="cmp-banner__button-container">
+            <div class="cmp-banner__button-contact">
+                <Button variant="transparent" href="https://linkedin.com">
+                    <Image src={'/public/images/contact-me/linkedin.svg'} alt={'LinkedIn'} width={24} height={24} />
+                </Button>
+                <Button variant="transparent" href="https://github.com">
+                    <Image src={'/public/images/contact-me/github.svg'} alt={'Github'} width={24} height={24} />
+                </Button>
+                <Button variant="transparent" href="https://facebook.com">
+                    <Image src={'/public/images/contact-me/facebook.svg'} alt={'Facebook'} width={24} height={24} />
+                </Button>
+            </div>
+            <Button variant="primary" type="reset" class="cmp-banner__button"> My Resume </Button>
+        </div>
+    </div>
+</section>

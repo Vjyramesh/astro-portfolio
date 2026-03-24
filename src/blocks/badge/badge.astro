@@ -1,0 +1,10 @@
+---
+import './badge.css';
+const {
+    class: className = ''
+} = Astro.props
+---
+
+<label aria-role="category" class={`badge ${className}`}>
+    <slot/>
+</label>

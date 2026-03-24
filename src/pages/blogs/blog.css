@@ -1,0 +1,7 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .page-blogs {
+        @apply pb-10 bg-white;
+    }
+}

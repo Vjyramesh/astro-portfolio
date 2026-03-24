@@ -1,0 +1,35 @@
+---
+import globalCssUrl from './../styles/global.css?url';
+import { ClientRouter } from 'astro:transitions';
+import Header from "../components/header/header.astro";
+
+import Footer from '../components/footer/footer.astro';
+---
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href={globalCssUrl} />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+        <ClientRouter transition:animate={'fade'} />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <slot />
+        </main>
+        <Footer />
+    </body>
+        <script>
+  document.addEventListener('astro:before-swap', () => {
+    document.getElementById('loader')?.classList.remove('hidden');
+  });
+
+  document.addEventListener('astro:after-swap', () => {
+    document.getElementById('loader')?.classList.add('hidden');
+  });
+    </script>
+</html>

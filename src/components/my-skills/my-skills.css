@@ -1,0 +1,23 @@
+@reference 'tailwindcss';
+
+@layer components {
+    .cmp-my-skills {
+        .cmp-container {
+            @apply lg:max-w-[65%];
+        }
+        .cmp-my-skills__grid {
+            @apply grid grid-cols-3 gap-10 mt-10;
+            @apply lg:grid-cols-6 lg:gap-20 lg:mt-20;
+        }
+        .cmp-my-skills__item {
+            img {
+                @apply mx-auto w-[50px] h-[50px];
+                @apply lg:w-[75px] lg:h-[75px];
+            }
+        }
+        h4 {
+            @apply mt-3 text-center text-[16px];
+            @apply lg:text-lg;
+        }
+    }
+}
