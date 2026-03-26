@@ -7,6 +7,9 @@ class Header {
     private abortController = new AbortController();
     private hamburger: HTMLButtonElement | null | undefined = this.block?.querySelector<HTMLButtonElement>('.cmp-header__hamburger');
     private navLink:NodeListOf<HTMLAnchorElement> | null | undefined = this.block?.querySelectorAll<HTMLAnchorElement>('.cmp-header__nav-link');
+    private themeLink:HTMLAnchorElement | null | undefined = this.block?.querySelector<HTMLAnchorElement>('.cmp-header__theme-toggle');
+    private darkThemeIcon: HTMLElement | null | undefined = this.block?.querySelector<HTMLElement>('.cmp-header__theme-icon-dark');
+    private lightThemeIcon: HTMLElement | null | undefined = this.block?.querySelector<HTMLElement>('.cmp-header__theme-icon-light');
     /**
      * Creates the header controller and wires up initial DOM behavior.
      */
@@ -19,13 +22,36 @@ class Header {
      */
     private init(): void {
         this.setActiveLink();
+        this.syncThemeIcon();
         window.addEventListener('hashchange', () => this.setActiveLink(), {signal: this.abortController.signal});
         this.hamburger?.addEventListener('click', (event) => this.handleHamburger(event), {signal: this.abortController.signal});
         this.navLink?.forEach((link) => {
             link?.addEventListener('click', (event) => this.handleNavLinkClick(event), {signal: this.abortController.signal});
         });
+        this.themeLink?.addEventListener('click', (event) => this.changeTheme(event), {signal: this.abortController.signal});
     }
 
+    private changeTheme(e: Event): void {
+        e.preventDefault();
+        const nextTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+
+        document.documentElement.classList.toggle('dark', nextTheme === 'dark');
+        document.documentElement.setAttribute('data-theme', nextTheme);
+        window.localStorage.setItem('theme', nextTheme);
+        this.syncThemeIcon();
+    }
+
+    private syncThemeIcon(): void {
+        const isDarkTheme = document.documentElement.classList.contains('dark');
+
+        if (this.darkThemeIcon) {
+            this.darkThemeIcon.hidden = isDarkTheme;
+        }
+
+        if (this.lightThemeIcon) {
+            this.lightThemeIcon.hidden = !isDarkTheme;
+        }
+    }
     private handleNavLinkClick(event: MouseEvent): void {
         this.closeMenu();
 

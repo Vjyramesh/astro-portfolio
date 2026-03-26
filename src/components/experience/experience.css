@@ -1,4 +1,4 @@
-@reference 'tailwindcss';
+@reference '../../styles/global.css';
 
 @layer components {
     .cmp-experience {
@@ -23,16 +23,19 @@
         }
 
         .cmp-experience__content-years {
-            @apply mb-1 text-gray-500 font-semibold text-sm
+            @apply mb-1 text-gray-500 font-semibold text-sm;
+            @apply dark:text-gray-300;
         }
         .cmp-experience__content-location {
-            @apply text-gray-700 text-sm mb-1
+            @apply text-gray-700 text-sm mb-1;
+            @apply dark:text-gray-400;
         }
 
         .cmp-experience__content-designation {
             @apply mt-5;
             .cmp-experience__content-years {
                 @apply text-gray-500 font-semibold text-sm mb-1;
+                @apply dark:text-gray-300;
             }
             h5 {
                 @apply text-lg mt-4 mb-2;
@@ -40,6 +43,7 @@
 
             p {
                 @apply text-sm text-gray-500 leading-5;
+                @apply dark:text-gray-400;
             }
         }
     }

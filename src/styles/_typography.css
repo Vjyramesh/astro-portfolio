@@ -1,5 +1,3 @@
-@reference 'tailwindcss';
-
 @layer base {
     h1 {
         @apply text-[28px] leading-7 mbe-2.5 font-bold;

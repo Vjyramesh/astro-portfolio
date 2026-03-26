@@ -1,8 +1,9 @@
-@reference 'tailwindcss';
+@reference '../../styles/global.css';
 
 @layer components {
     .cmp-banner {
         @apply bg-white text-center py-20;
+        @apply dark:bg-gray-900;
 
         .cmp-banner__image {
             @apply flex items-center w-full justify-center mb-3;
@@ -13,9 +14,11 @@
 
         .cmp-banner__designation {
             @apply text-gray-700 mb-3;
+            @apply dark:text-gray-200;
         }
         .cmp-banner__description {
             @apply lg:w-[50%] mx-auto leading-6 text-gray-500;
+            @apply dark:text-gray-200;
         }
 
         .cmp-banner__button-container {

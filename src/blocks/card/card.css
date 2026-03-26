@@ -1,8 +1,9 @@
-@reference 'tailwindcss';
+@reference '../../styles/global.css';
 
 @layer components {
     .card {
         @apply bg-white text-left border border-gray-100;
+        @apply dark:bg-gray-900 dark:border-gray-950;
         img {
             @apply w-full h-[250px] object-cover object-top;
         }
@@ -13,10 +14,12 @@
 
         :is(h1, h2, h3, h4, h5, h6) {
             @apply text-black font-bold line-clamp-2 h-13;
+            @apply dark:text-white;
         }
 
         p {
-            @apply font-light leading-5 line-clamp-3 text-gray-500 mt-4;
+            @apply font-light leading-5 line-clamp-3 text-black mt-4;
+            @apply dark:text-white;
         }
 
         .btn {

@@ -1,7 +1,8 @@
-@reference 'tailwindcss';
+@reference '../../styles/global.css';
 
 @layer components {
     .badge {
         @apply bg-gray-100 px-2 py-1 rounded-md mt-2 inline-block text-sm;
+        @apply dark:bg-gray-950;
     }
 }

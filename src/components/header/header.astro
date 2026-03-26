@@ -9,15 +9,6 @@ import { Icon } from "astro-icon/components";
         <div class="cmp-header__name">
             <a href="/#">Vijay Rameshkumar</a>
         </div>
-        <Button class="btn cmp-header__hamburger" variant="transparent">
-            <span class="cmp-header__icon cmp-header__icon-menu">
-                <Icon name={"hamburger"} size={20} />
-            </span>
-            <span class="cmp-header__icon cmp-header__icon-close" hidden>
-                <Icon name={"close"} size={20} />
-            </span>
-            <span class="sr-only">Hamburger Button</span>
-        </Button>
         <nav class="cmp-header__nav">
             <ul>
                 <li class="cmp-header__nav-item">
@@ -43,6 +34,26 @@ import { Icon } from "astro-icon/components";
                 </li>
             </ul>
         </nav>
+        <div class="cmp-header__actions">
+            <a class="cmp-header__theme-toggle" href="#">
+                <span class="cmp-header__theme-icon cmp-header__theme-icon-dark">
+                    <Icon name={'dark'} />
+                </span>
+                <span class="cmp-header__theme-icon cmp-header__theme-icon-light" hidden>
+                    <Icon name={'light'} />
+                </span>
+                <span class="sr-only">Toggle theme</span>
+            </a>
+            <Button class="btn cmp-header__hamburger" variant="transparent">
+                <span class="cmp-header__icon cmp-header__icon-menu">
+                    <Icon name={"hamburger"} size={20} />
+                </span>
+                <span class="cmp-header__icon cmp-header__icon-close" hidden>
+                    <Icon name={"close"} size={20} />
+                </span>
+                <span class="sr-only">Hamburger Button</span>
+            </Button>
+        </div>
     </div>
 </header>
 

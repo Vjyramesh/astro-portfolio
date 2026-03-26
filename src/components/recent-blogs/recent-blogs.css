@@ -1,4 +1,4 @@
-@reference 'tailwindcss';
+@reference '../../styles/global.css';
 
 @layer components {
     .cmp-recent-blogs {
@@ -13,7 +13,7 @@
         .cmp-recent-blogs__publish-date {
             @apply flex items-center mt-2;
             p {
-                @apply text-sm text-gray-500 mt-0;
+                @apply text-sm text-black mt-0;
             }
         }
 

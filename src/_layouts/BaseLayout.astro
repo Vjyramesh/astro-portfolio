@@ -14,6 +14,16 @@ import Footer from '../components/footer/footer.astro';
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
+        <script is:inline>
+            (() => {
+                const storedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const theme = storedTheme ?? (prefersDark ? 'dark' : 'light');
+
+                document.documentElement.classList.toggle('dark', theme === 'dark');
+                document.documentElement.setAttribute('data-theme', theme);
+            })();
+        </script>
         <ClientRouter transition:animate={'fade'} />
     </head>
     <body>

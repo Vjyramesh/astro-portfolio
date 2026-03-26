@@ -1,4 +1,4 @@
-@reference 'tailwindcss';
+@reference '../../styles/global.css';
 
 @layer components {
     .cmp-my-works {
@@ -8,13 +8,6 @@
 
         .cmp-my-works__view-all {
             @apply w-[200px] mt-5 h-12 flex justify-self-center;
-        }
-
-        .cmp-my-works__publish-date {
-            @apply flex items-center mt-2;
-            p {
-                @apply text-sm text-gray-500 mt-0;
-            }
         }
 
     }
