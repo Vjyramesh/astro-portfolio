@@ -3,5 +3,6 @@
 @layer components {
     .page-my-works {
         @apply pb-10 bg-white;
+        @apply dark:bg-gray-900;
     }
 }

@@ -3,6 +3,7 @@
 @layer components {
     .cmp-image-banner {
         @apply before:absolute before:left-0 before:top-0 before:w-full before:bg-black/40 z-10 before:h-full;
+        @apply dark:before:bg-black/80;
         @apply relative py-[150px] overflow-hidden;
 
         img {

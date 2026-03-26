@@ -3,6 +3,7 @@
 @layer components {
     .page-blog-detail {
         @apply pb-10 bg-white;
+        @apply dark:bg-gray-900;
 
         b, strong {
             @apply font-bold;

@@ -16,12 +16,18 @@ import Footer from '../components/footer/footer.astro';
         <title>Astro</title>
         <script is:inline>
             (() => {
-                const storedTheme = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const theme = storedTheme ?? (prefersDark ? 'dark' : 'light');
+                const applyTheme = () => {
+                    const storedTheme = localStorage.getItem('theme');
+                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    const theme = storedTheme ?? (prefersDark ? 'dark' : 'light');
 
-                document.documentElement.classList.toggle('dark', theme === 'dark');
-                document.documentElement.setAttribute('data-theme', theme);
+                    document.documentElement.classList.toggle('dark', theme === 'dark');
+                    document.documentElement.setAttribute('data-theme', theme);
+                };
+
+                applyTheme();
+                document.addEventListener('astro:page-load', applyTheme);
+                document.addEventListener('DOMContentLoaded', applyTheme);
             })();
         </script>
         <ClientRouter transition:animate={'fade'} />
