@@ -9,10 +9,8 @@
             @apply flex justify-between items-center gap-3
         }
         .cmp-header__name {
-            a {
-                @apply text-lg font-bold h-full leading-15 text-black uppercase;
-                @apply dark:text-white;
-            }
+            @apply text-lg font-bold h-full leading-15 text-black uppercase;
+            @apply dark:text-white;
         }
 
         .cmp-header__actions {
